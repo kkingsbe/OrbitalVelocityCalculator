@@ -74,7 +74,9 @@ public class Controller {
         String Apoapsis = apoapsis.getText();
         String Periapsis = periapsis.getText();
         String Radius = getRadius(objectName);
-        orbit.setRadiusY((Double.parseDouble(Apoapsis) + Double.parseDouble(Periapsis) + Double.parseDouble(Radius)) / 40);
+        //orbit.setRadiusY((Double.parseDouble(Apoapsis) + Double.parseDouble(Periapsis) + Double.parseDouble(Radius)) / 40);
+
+        center.setText(objectName);
     }
 
     public String getMass(String objectName){
@@ -97,5 +99,9 @@ public class Controller {
         }
 
         return radii.get(x).toString();
+    }
+
+    public void newName(ActionEvent actionEvent) {
+        center.setText(orbitedObject.getValue().toString());
     }
 }

@@ -20,7 +20,7 @@
    <children>
       <Pane prefHeight="835.0" prefWidth="1413.0">
          <children>
-            <ComboBox fx:id="orbitedObject" layoutX="352.0" layoutY="57.0" prefHeight="32.0" prefWidth="192.0" />
+            <ComboBox fx:id="orbitedObject" layoutX="352.0" layoutY="57.0" onAction="#newName" prefHeight="32.0" prefWidth="192.0" />
             <Label layoutX="34.0" layoutY="54.0" text="Choose Orbited Object:">
                <font>
                   <Font size="27.0" />
@@ -55,7 +55,7 @@
             <Separator layoutX="704.0" orientation="VERTICAL" prefHeight="835.0" prefWidth="17.0" />
             <Ellipse fx:id="orbit" fill="#ffffff00" layoutX="1066.0" layoutY="330.0" radiusX="146.0" radiusY="207.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fill="#77c971" layoutX="1066.0" layoutY="389.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-            <Label fx:id="center" layoutX="1038.0" layoutY="371.0">
+            <Label fx:id="center" alignment="CENTER" layoutX="1026.0" layoutY="371.0" prefHeight="36.0" prefWidth="80.0" textAlignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
