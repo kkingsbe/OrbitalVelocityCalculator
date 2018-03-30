@@ -26,6 +26,11 @@ public class Controller {
     public List objects = new ArrayList<String>();
     public List masses = new ArrayList<String>();
     public List radii = new ArrayList<String>();
+    public Label bodyMass;
+    public Label bodyRadius;
+    public Label bodyPeriod;
+    public Label averageOrbitalVelocity;
+    public Label escapeVelocity;
 
     public void initialize(){
         BufferedReader reader;
@@ -77,6 +82,13 @@ public class Controller {
         //orbit.setRadiusY((Double.parseDouble(Apoapsis) + Double.parseDouble(Periapsis) + Double.parseDouble(Radius)) / 40);
 
         center.setText(objectName);
+
+        updateInfo(objectName,mass,Radius);
+    }
+
+    private void updateInfo(String objectName, String mass, String radius) {
+        bodyMass.setText(objectName + " has a mass of " + mass + "kg.");
+        bodyRadius.setText(objectName + " has a radius of " + radius + "km.");
     }
 
     public String getMass(String objectName){

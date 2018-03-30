@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -20,8 +21,18 @@
    <children>
       <Pane prefHeight="835.0" prefWidth="1413.0">
          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="841.0" stroke="BLACK" strokeType="INSIDE" width="1413.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#da4646" />
+                        <Stop color="#ffd900" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
             <ComboBox fx:id="orbitedObject" layoutX="352.0" layoutY="57.0" onAction="#newName" prefHeight="32.0" prefWidth="192.0" />
-            <Label layoutX="34.0" layoutY="54.0" text="Choose Orbited Object:">
+            <Label layoutX="34.0" layoutY="54.0" text="Choose Orbited Body:">
                <font>
                   <Font size="27.0" />
                </font>
@@ -52,7 +63,6 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Separator layoutX="704.0" orientation="VERTICAL" prefHeight="835.0" prefWidth="17.0" />
             <Ellipse fx:id="orbit" fill="#ffffff00" layoutX="1066.0" layoutY="330.0" radiusX="146.0" radiusY="207.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fill="#77c971" layoutX="1066.0" layoutY="389.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
             <Label fx:id="center" alignment="CENTER" layoutX="1026.0" layoutY="371.0" prefHeight="36.0" prefWidth="80.0" textAlignment="CENTER">
@@ -65,6 +75,33 @@
                   <Font size="16.0" />
                </font>
             </Button>
+            <Separator layoutY="370.0" prefHeight="75.0" prefWidth="712.0" />
+            <Separator layoutX="704.0" orientation="VERTICAL" prefHeight="841.0" prefWidth="17.0" />
+            <Label fx:id="bodyMass" layoutX="34.0" layoutY="426.0" text="Orbited Bodys Mass:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="bodyRadius" layoutX="34.0" layoutY="486.0" text="Orbited Bodys Radius:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="bodyPeriod" layoutX="34.0" layoutY="546.0" text="Orbital Period:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="averageOrbitalVelocity" layoutX="34.0" layoutY="606.0" text="Average Orbital Velocity:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="escapeVelocity" layoutX="34.0" layoutY="666.0" text="Escape Velocity at Current Orbit:" wrapText="true">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
