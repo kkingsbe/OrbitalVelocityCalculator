@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="835.0" prefWidth="1413.0">
+         <children>
+            <ComboBox fx:id="orbitedObject" layoutX="352.0" layoutY="57.0" prefHeight="32.0" prefWidth="192.0" />
+            <Label layoutX="34.0" layoutY="54.0" text="Choose Orbited Object:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="133.0" text="Orbit Apoapsis:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <TextField fx:id="apoapsis" layoutX="352.0" layoutY="133.0" onInputMethodTextChanged="#applyChanges" prefHeight="32.0" prefWidth="192.0" promptText="Orbit Apoapsis in Km">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="34.0" layoutY="216.0" text="Orbit Periapsis:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <TextField fx:id="periapsis" layoutX="352.0" layoutY="216.0" onInputMethodTextChanged="#applyChanges" prefHeight="32.0" prefWidth="192.0" promptText="Orbit Periapsis in Km">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ComboBox layoutX="352.0" layoutY="93.0" prefHeight="32.0" prefWidth="192.0" visible="false" />
+            <Label layoutX="34.0" layoutY="90.0" text="Select Moon:" visible="false">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Separator layoutX="704.0" orientation="VERTICAL" prefHeight="835.0" prefWidth="17.0" />
+            <Ellipse fx:id="orbit" fill="#ffffff00" layoutX="1066.0" layoutY="330.0" radiusX="146.0" radiusY="207.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#77c971" layoutX="1066.0" layoutY="389.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="center" layoutX="1038.0" layoutY="371.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="apply" layoutX="384.0" layoutY="293.0" mnemonicParsing="false" onAction="#applyChanges" text="Apply Changes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
